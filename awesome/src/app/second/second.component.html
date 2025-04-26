@@ -1,1 +1,14 @@
-<p>second works!</p>
+<div class="p-4">
+    <h2 class="text-xl font-bold mb-4">Lista przedmiotów z DB</h2>
+  
+    <ul *ngIf="storageItems.length; else brak">
+      <li *ngFor="let item of storageItems" class="mb-2">
+        • {{ item.name }}
+      </li>
+    </ul>
+  
+    <ng-template #brak>
+      <p class="text-gray-500">Brak przedmiotów do wyświetlenia.</p>
+    </ng-template>
+  </div>
+  <router-outlet></router-outlet>

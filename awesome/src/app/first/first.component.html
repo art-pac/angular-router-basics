@@ -1,1 +1,14 @@
-<p>first works!</p>
+<div>
+  <h2 class="font-bold underline">Dodaj przedmiot</h2>
+  <form (ngSubmit)="addItem()" class="p-fluid">
+    <input 
+      type="text" 
+      [(ngModel)]="newItem" 
+      name="item" 
+      placeholder="Nazwa przedmiotu" 
+      required 
+      class="border p-2 rounded">
+    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Dodaj</button>
+  </form>
+</div>
+<router-outlet></router-outlet>
